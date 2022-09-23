@@ -1,0 +1,6 @@
+- name: Install bitcoin-core with option 
+  community.general.snap:
+    name: bitcoin-core
+    channel: latest/stable
+
+

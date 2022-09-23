@@ -8,10 +8,84 @@
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    method: user
 
 - name: Install the Spotify flatpak application
   community.general.flatpak:
     name: com.spotify.Client
     state: present
-    method: user
+
+- name: Install the Authenticator flatpak application
+  community.general.flatpak:
+    name: com.belmoussaoui.Authenticator
+    state: present
+
+- name: Install the Bitwarden flatpak application
+  community.general.flatpak:
+    name: com.bitwarden.desktop
+    state: present
+
+- name: Install the Blanket flatpak application
+  community.general.flatpak:
+    name: com.rafaelmardojai.Blanket
+    state: present
+
+- name: Install the Calibre flatpak application
+  community.general.flatpak:
+    name: com.calibre_ebook.calibre
+    state: present
+
+- name: Install the Coolero flatpak application
+  community.general.flatpak:
+    name: org.coolero.Coolero
+    state: present
+
+- name: Install the Crytomator flatpak application
+  community.general.flatpak:
+    name: org.cryptomator.Cryptomator
+    state: present
+
+- name: Install the Extensions flatpak application
+  community.general.flatpak:
+    name: org.gnome.Extensions
+    state: present
+
+- name: Install the Firefox flatpak application
+  community.general.flatpak:
+    name: org.mozilla.firefox
+    state: present
+
+- name: Install the Firmware flatpak application
+  community.general.flatpak:
+    name: org.gnome.Firmware
+    state: present
+
+- name: Install the Chrome flatpak application
+  community.general.flatpak:
+    name: com.google.Chrome
+    state: present
+
+- name: Install the MEGAsync flatpak application
+  community.general.flatpak:
+    name: nz.mega.MEGAsync
+    state: present
+
+- name: Install the OBS Studio flatpak application
+  community.general.flatpak:
+    name: com.obsproject.Studio
+    state: present
+
+- name: Install the POSTMAN flatpak application
+  community.general.flatpak:
+    name: com.getpostman.Postman 
+    state: present
+
+- name: Install the Remmina flatpak application
+  community.general.flatpak:
+    name: org.remmina.Remmina
+    state: present
+
+- name: Install the Thunderbird flatpak application
+  community.general.flatpak:
+    name: org.mozilla.Thunderbird
+    state: present
+
