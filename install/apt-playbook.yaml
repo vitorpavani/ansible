@@ -1,0 +1,8 @@
+- name: Update all packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
