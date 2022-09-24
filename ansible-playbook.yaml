@@ -4,6 +4,8 @@
   hosts: localhost
   become: true
   connection: local
+  vars:
+    ansible_user: vipavani
   pre_tasks:
     - name: "Update all packages to their latest version"
       apt:
@@ -12,13 +14,17 @@
     - name: "Remove dependencies that are no longer required"
       apt:
         autoremove: yes
-
-- name: "Install packages"
-  hosts: localhost
-  connection: local
-  become: true
   tasks:
     - include: "install/apt-playbook.yaml"
     - include: "install/flatpak-playbook.yaml"
     - include: "install/snap-playbook.yaml"
+    - include: "install/manual-playbook.yaml"
+
+  post_tasks:
+  - name: Remove useless packages from the cache
+    apt:
+      autoclean: yes
+  - name: Remove dependencies that are no longer required
+    apt:
+      autoremove: yes
 

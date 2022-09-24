@@ -1,0 +1,37 @@
+- name: Download the NordVPN file
+  get_url:
+    url: https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb
+    dest: "/home/{{ ansible_user }}/Downloads/nordvpn-release_1.0.0_all.deb"
+
+- name: Install the NordVPN Repo
+  apt:
+    deb: "/home/{{ ansible_user }}/Downloads/nordvpn-release_1.0.0_all.deb"
+
+- name: Install the NordVPN package
+  apt:
+    name: nordvpn
+    state: latest
+
+- name: Add APT key for Brave repositories
+  apt_key:
+    url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    state: present  
+
+- name: Install Brave Package
+  apt:
+    name: brave-browser
+    state: latest
+
+- name: Add APT key for Github CLI
+  apt_key:
+    url: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+    state: present
+
+- name: Install Github-CLI Package
+  apt:
+    name: gh
+    state: latest
+
+- name: Install VSCode Package
+  apt:
+    deb: https://go.microsoft.com/fwlink/?LinkID=760868

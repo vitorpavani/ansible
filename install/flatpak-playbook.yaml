@@ -9,6 +9,11 @@
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
 
+- name: Install the Flatpak flatpak application
+  community.general.flatpak:
+    name: com.anydesk.Anydesk
+    state: present
+
 - name: Install the Spotify flatpak application
   community.general.flatpak:
     name: com.spotify.Client
@@ -87,5 +92,10 @@
 - name: Install the Thunderbird flatpak application
   community.general.flatpak:
     name: org.mozilla.Thunderbird
+    state: present
+
+- name: Install the LibreOffice flatpak application
+  community.general.flatpak:
+    name: org.libreoffice.LibreOffice
     state: present
 
