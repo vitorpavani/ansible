@@ -5,6 +5,7 @@
       - gnome-disk-utility           # Disk utility
       - evince                       # PDF viewer
       - gedit                        # Text editor
+      - git-all                      # Git
       - dconf-editor                 # Dconf editor
       - terminator                   # Terminal emulator
       - gnome-tweaks                 # GNOME tweaks
