@@ -1,49 +1,12 @@
-- name: Update all packages to their latest version
+- name: Ansible apt install packages
   apt:
-    name: "*"
+    name: 
+      - file-roller                  # Archive manager
+      - gnome-disk-utility           # Disk utility
+      - evince                       # PDF viewer
+      - gedit                        # Text editor
+      - dconf-editor                 # Dconf editor
+      - terminator                   # Terminal emulator
+      - gnome-tweaks                 # GNOME tweaks
+      - virt-manager                 # Virtual machine manager
     state: latest
-
-- name: Remove dependencies that are no longer required
-  apt:
-    autoremove: yes
-
-- name: Ansible apt install Archive Manager
-  apt:
-    name: file-roller
-    state: present
-
-- name: Ansible apt install Disk Utility
-  apt:
-    name: gnome-disk-utility
-    state: present
-
-- name: Ansible apt install Document Viewer
-  apt:
-    name: evince
-    state: present
-
-- name: Ansible apt install gedit
-  apt:
-    name: gedit
-    state: present
-
-- name: Ansible apt install dconf-editor
-  apt:
-    name: dconf-editor
-    state: present
-
-- name: Ansible apt install terminator
-  apt:
-    name: terminator
-    state: present
-
-- name: Ansible apt install Tweaks
-  apt:
-    name: gnome-tweaks
-    state: present
-
-- name: Ansible apt install Virtual Machine Manager
-  apt:
-    name: virt-manager
-    state: present
-

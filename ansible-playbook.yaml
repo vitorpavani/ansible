@@ -1,16 +1,23 @@
 # ansible-playbook ansible-playbook.yaml -i localhost -K
 ---
-- name: "Playing with Ansible and Git"
+- name: "Update all packages to their latest version"
+  hosts: localhost
+  become: true
+  connection: local
+  pre_tasks:
+    - name: "Update all packages to their latest version"
+      apt:
+        name: "*"
+        state: latest
+    - name: "Remove dependencies that are no longer required"
+      apt:
+        autoremove: yes
+
+- name: "Install packages"
   hosts: localhost
   connection: local
   become: true
   tasks:
-    - name: "just execute a ls -lrt command"
-      shell: "ls -lrt"
-      register: "output"
-
-    - debug: "var=output.stdout_lines"
-
     - include: "install/apt-playbook.yaml"
     - include: "install/flatpak-playbook.yaml"
     - include: "install/snap-playbook.yaml"
