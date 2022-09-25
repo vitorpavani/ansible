@@ -7,10 +7,17 @@
   apt:
     deb: "/home/{{ ansible_user }}/Downloads/nordvpn-release_1.0.0_all.deb"
 
+- name: "Update all packages to their latest version"
+  apt:
+    name: "*"
+    state: latest
+    force_apt_get: yes
+    
 - name: Install the NordVPN package
   apt:
     name: nordvpn
     state: latest
+    force_apt_get: yes
 
 - name: Add APT key for Brave repositories
   apt_key:
@@ -22,10 +29,10 @@
     name: brave-browser
     state: latest
 
-- name: Add APT key for Github CLI
+- name: Add APT key for Github-cli repositories
   apt_key:
     url: https://cli.github.com/packages/githubcli-archive-keyring.gpg
-    state: present
+    state: present  
 
 - name: Install Github-CLI Package
   apt:
