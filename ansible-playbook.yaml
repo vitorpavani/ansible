@@ -17,8 +17,8 @@
   tasks:
     - include: "install/apt-playbook.yaml"
     - include: "install/flatpak-playbook.yaml"
-    - include: "install/snap-playbook.yaml"
-    - include: "install/manual-playbook.yaml"
+    # - include: "install/snap-playbook.yaml"
+    # - include: "install/manual-playbook.yaml"
 
   post_tasks:
   - name: Remove useless packages from the cache
