@@ -9,6 +9,6 @@
       - dconf-editor # Dconf editor
       - terminator # Terminal emulator
       - gnome-tweaks # GNOME tweaks
-      - virt-manager # Virtual machine manager
+      # - virt-manager # Virtual machine manager
       - gnome-shell-extension-manager # GNOME shell extension manager
     state: latest
