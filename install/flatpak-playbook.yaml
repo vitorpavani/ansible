@@ -81,7 +81,7 @@
 
 - name: Install the POSTMAN flatpak application
   community.general.flatpak:
-    name: com.getpostman.Postman 
+    name: com.getpostman.Postman
     state: present
 
 - name: Install the Remmina flatpak application
@@ -99,3 +99,7 @@
     name: org.libreoffice.LibreOffice
     state: present
 
+- name: Install the MongoDB Compass flatpak application
+  community.general.flatpak:
+    name: com.mongodb.Compass
+    state: present
