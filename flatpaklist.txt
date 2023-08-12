@@ -1,0 +1,9 @@
+
+MEGAsync	nz.mega.MEGAsync	4.9.5.0_OSX	stable	system
+Cryptomator	org.cryptomator.Cryptomator	1.9.3	stable	system
+Extensions	org.gnome.Extensions	44.0	stable	system
+Firmware	org.gnome.Firmware	43.2	stable	system
+LibreOffice	org.libreoffice.LibreOffice	7.5.5.2	stable	system
+Thunderbird	org.mozilla.Thunderbird	115.1.0	stable	system
+Firefox	org.mozilla.firefox	116.0.2	stable	system
+Remmina	org.remmina.Remmina	1.4.31	stable	system
