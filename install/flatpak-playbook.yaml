@@ -17,7 +17,6 @@
       - com.bitwarden.desktop
       - com.calibre_ebook.calibre
       - com.getpostman.Postman
-      - com.github.tchx84
       - com.google.Chrome
       - com.mongodb.Compass
       - com.redis.RedisInsight

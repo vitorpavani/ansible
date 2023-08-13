@@ -1,19 +1,19 @@
-- name: Install bitcoin-core with option
-  community.general.snap:
-    name: bitcoin-core
-    channel: latest/stable
+# - name: Install bitcoin-core with option
+#   community.general.snap:
+#     name: bitcoin-core
+#     channel: latest/stable
 
-- name: install code-insiders via snap
-  command: snap install code-insiders
+# - name: install code-insiders via snap
+#   command: snap install code-insiders
 
-- name: install datagrip via snap
-  command: snap install datagrip --classic
+# - name: install datagrip via snap
+#   command: snap install datagrip --classic
 
-- name: install OBS Studio via snap
-  command: snap install obs-studio
+# - name: install OBS Studio via snap
+#   command: snap install obs-studio
 
-- name: install redisinsight via snap
-  command: snap install redisinsight
+# - name: install redisinsight via snap
+#   command: snap install redisinsight
 
 - name: install packages via snap
-  command: snap install code-insiders datagrip notion-snap obs-studio rambox snap-store
+  command: snap install datagrip  obs-studio 
