@@ -15,7 +15,7 @@
       apt:
         autoremove: yes
   tasks:
-    - include: "install/apt-playbook.yaml"
+    # - include: "install/apt-playbook.yaml"
     - include: "install/flatpak-playbook.yaml"
     # - include: "install/snap-playbook.yaml"
     # - include: "install/manual-playbook.yaml"
